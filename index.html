@@ -7,18 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
 
       body {
-        background-color: #f5f0e8;
         background-color: #fff;
         color: #1a1208;
         font-family: 'Lora', Georgia, serif;
@@ -28,35 +20,59 @@
         margin: 0 auto;
         padding: 72px 36px 0px;
         background-image:
-  repeating-linear-gradient(45deg, #f7f5f2 0, #f7f5f2 1px, transparent 0, transparent 50%),
-  repeating-linear-gradient(-45deg, #f7f5f2 0, #f7f5f2 1px, transparent 0, transparent 50%);
+          repeating-linear-gradient(45deg, #f7f5f2 0, #f7f5f2 1px, transparent 0, transparent 50%),
+          repeating-linear-gradient(-45deg, #f7f5f2 0, #f7f5f2 1px, transparent 0, transparent 50%);
         background-size: 20px 20px;
+      }
+
+      /* Load Animation */
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
       }
 
       header {
         background-color: #162038;
         padding: 80px 48px 72px;
-        box-shadow: 0 0 50px rgba(22, 32, 56, 0.7); 
+        box-shadow: 0 0 50px rgba(22, 32, 56, 0.7);
         border-radius: 5px;
-}
+        animation: fadeIn 0.8s ease both;
+      }
 
-      h1 {
-        font-family: 'DM Mono', monospace;
-        font-weight: 600;
-        font-size: clamp(3.2rem, 12vw, 7rem);
-        font-size: clamp(3rem, 10vw, 6rem);
-        line-height: 0.95;
-        /* letter-spacing: -0.03em; */
-        word-spacing: -0.2em;
-        color: #1a1208;
-        color: #f2ece0;
-        color: #8a9ab8;
-        /* margin-bottom: 36px; */
-        text-transform: uppercase;
+      header h1 {
+        animation: fadeUp 0.9s ease 0.2s both;
       }
 
       header img {
         margin-bottom: 0px;
+        animation: fadeUp 0.9s ease 0.4s both;
+      }
+
+      /* Scroll Reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      h1 {
+        font-family: 'DM Mono', monospace;
+        font-weight: 600;
+        font-size: clamp(3rem, 10vw, 6rem);
+        line-height: 0.95;
+        word-spacing: -0.2em;
+        color: #8a9ab8;
+        text-transform: uppercase;
       }
 
       h2 {
@@ -70,7 +86,6 @@
         margin-bottom: 24px;
         padding-bottom: 5px;
         border-bottom: 1px solid #d7cfc5;
-        /* border-bottom: 1px solid #1a1208; */
         max-width: 100ch;
       }
 
@@ -86,17 +101,10 @@
         width: 100%;
         max-width: 500px;
         margin: 40px 0;
-        border: 3px solid #1a1208;
-        border: 1px solid #2a2a2a;
-        border: 1px solid #2e2416;
-        border: 1px solid #d7cfc5;
         border: 1px solid #8a9ab8;
-        /* filter: sepia(10%) contrast(1.05); */
       }
 
-      dl {
-        margin-top: 12px;
-      }
+      dl { margin-top: 12px; }
 
       dt {
         font-family: 'DM Mono', monospace;
@@ -107,12 +115,10 @@
         padding-left: 16px;
         border-left: 4px solid #8b2500;
         letter-spacing: -0.01em;
+        transition: border-left-width 0.3s ease;
       }
 
-      footer section {
-        line-height: 0.6;
-        font-weight: 200;
-      }
+      dt:hover { border-left-width: 8px; }
 
       dd, footer .attribution {
         color: #4a3a28;
@@ -128,46 +134,37 @@
         max-width: none;
       }
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 12px;
-      }
+      footer section { line-height: 0.6; font-weight: 200; }
+
+      ul { list-style: none; padding: 0; margin-top: 12px; }
 
       li {
         color: #2e2416;
         font-size: 1.05rem;
         padding: 18px 0;
-        border-bottom: 1px solid #e6e2dc;
         border-bottom: 1px solid #c8bfb0;
         padding-left: 28px;
         position: relative;
+        transition: padding-left 0.3s ease;
       }
 
+      li:hover { padding-left: 36px; }
+
       li::before {
-        content: '▸';
         content: '→';
         color: #c9a84c;
         position: absolute;
         left: 0;
         font-size: 1rem;
         top: 18px;
+        transition: left 0.3s ease;
       }
 
-      a {
-        color: #8b2500;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
+      li:hover::before { left: 8px; }
 
-      a:hover {
-        color: #1a1208;
-      }
-
-      strong {
-        color: #1a1208;
-        font-weight: 600;
-      }
+      a { color: #8b2500; text-decoration: underline; text-underline-offset: 3px; }
+      a:hover { color: #1a1208; }
+      strong { color: #1a1208; font-weight: 600; }
     </style>
   </head>
   <body>
@@ -176,51 +173,35 @@
       <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi">
     </header>
 
-    <h2>About Me</h2>
-    <p>Joshua is a 400-level student of Library and Information Science with a strong passion for the financial markets. He began his forex trading journey in 2025, where he was introduced to the dynamics of the global financial space. Through discipline, resilience, and consistent learning, he has successfully navigated the challenges that come with trading.</p>
-    <p>Today, Joshua is dedicated to empowering young individuals by helping them see the financial market from a more informed and strategic perspective. He is committed to inspiring enthusiasm, building confidence, and guiding others toward making smarter financial decisions.</p>
+    <h2 class="reveal">About Me</h2>
+    <p class="reveal">Joshua is a 400-level student of Library and Information Science with a strong passion for the financial markets. He began his forex trading journey in 2025, where he was introduced to the dynamics of the global financial space. Through discipline, resilience, and consistent learning, he has successfully navigated the challenges that come with trading.</p>
+    <p class="reveal">Today, Joshua is dedicated to empowering young individuals by helping them see the financial market from a more informed and strategic perspective. He is committed to inspiring enthusiasm, building confidence, and guiding others toward making smarter financial decisions.</p>
 
-    <section style="
-        margin-top: 72px;
-        background-color: #162038;
-        border-radius: var(--border-radius, 12px);
-        padding: 12px 48px;">
-        <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-bottom: 0; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">What I do</h2>
-        <p style="color: #8a9ab8;
-        max-width: 54ch;">I help young individuals understand and confidently navigate the financial markets, particularly forex trading. Through guidance, mentorship, and shared experience, I simplify complex trading concepts and promote a disciplined, informed approach to financial growth.</p>
-        <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311673/WhatsApp_Image_2026-04-04_at_14.59.26_q2egbe.jpg" alt="Mideforex Logo" style="max-width: 375px; margin-left: 50px; margin-right: auto;">
+    <section class="reveal" style="margin-top: 72px; background-color: #162038; border-radius: 12px; padding: 12px 48px;">
+      <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-bottom: 0; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">What I do</h2>
+      <p style="color: #8a9ab8; max-width: 54ch;">I help young individuals understand and confidently navigate the financial markets, particularly forex trading. Through guidance, mentorship, and shared experience, I simplify complex trading concepts and promote a disciplined, informed approach to financial growth.</p>
+      <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311673/WhatsApp_Image_2026-04-04_at_14.59.26_q2egbe.jpg" alt="Mideforex Logo" style="max-width: 375px; margin-left: 50px; margin-right: auto;">
     </section>
 
-    <h2>Vision</h2>
-    <p>To raise a community of confident and financially informed youths equipped to succeed in the global financial markets.</p>
+    <h2 class="reveal">Vision</h2>
+    <p class="reveal">To raise a community of confident and financially informed youths equipped to succeed in the global financial markets.</p>
 
-    <h2>Skills & Expertise</h2>
-    <dl>
+    <h2 class="reveal">Skills &amp; Expertise</h2>
+    <dl class="reveal">
       <dt>Forex Trading</dt>
       <dd>Market analysis, trade execution, and strategy development</dd>
-
       <dt>Technical Analysis</dt>
       <dd>Chart patterns, and price action interpretation</dd>
-
       <dt>Risk Management</dt>
       <dd>Capital preservation and disciplined trade management</dd>
-
       <dt>Fundamental Analysis</dt>
       <dd>Understanding economic news and market-moving events</dd>
     </dl>
 
-    <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311524/WhatsApp_Image_2026-04-04_at_14.59.26_1_yg2fz0.jpg" alt="NairaTrader Certificate">
-    <section style="width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 calc(50vw - 410px) 48px; background-color: #162038;">
-      <style>
-        ul.results > * {
-          color: #8a9ab8;
-        }
+    <img class="reveal" src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311524/WhatsApp_Image_2026-04-04_at_14.59.26_1_yg2fz0.jpg" alt="NairaTrader Certificate">
 
-        ul.results h2, ul.results li {
-          border-bottom: 1px solid #3366bd;
-        }
-      </style>
-      <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-top: 30px; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">Results & Impact</h2>
+    <section class="reveal" style="width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 calc(50vw - 410px) 48px; background-color: #162038;">
+      <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-top: 30px; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">Results &amp; Impact</h2>
       <ul class="results">
         <li>Guided and mentored aspiring traders in understanding the fundamentals of forex trading</li>
         <li>Helped young individuals develop a disciplined and informed approach to financial markets</li>
@@ -240,5 +221,18 @@
       </section>
       <p class="attribution">Built by Ogechukwu Onuora @ OWeb. All rights reserved.</p>
     </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>
