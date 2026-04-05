@@ -19,6 +19,7 @@
 
       body {
         background-color: #f5f0e8;
+        background-color: #fff;
         color: #1a1208;
         font-family: 'Lora', Georgia, serif;
         font-size: 18px;
@@ -26,6 +27,11 @@
         max-width: 820px;
         margin: 0 auto;
         padding: 72px 36px 0px;
+      }
+
+      header {
+        background-color: #162038;
+        padding: 80px 48px 72px;
       }
 
       h1 {
@@ -37,8 +43,14 @@
         /* letter-spacing: -0.03em; */
         word-spacing: -0.2em;
         color: #1a1208;
-        margin-bottom: 36px;
+        color: #f2ece0;
+        color: #8a9ab8;
+        /* margin-bottom: 36px; */
         text-transform: uppercase;
+      }
+
+      header img {
+        margin-bottom: 0px;
       }
 
       h2 {
@@ -72,7 +84,8 @@
         border: 1px solid #2a2a2a;
         border: 1px solid #2e2416;
         border: 1px solid #d7cfc5;
-        filter: sepia(10%) contrast(1.05);
+        border: 1px solid #8a9ab8;
+        /* filter: sepia(10%) contrast(1.05); */
       }
 
       dl {
@@ -90,7 +103,12 @@
         letter-spacing: -0.01em;
       }
 
-      dd, footer p {
+      footer section {
+        line-height: 0.6;
+        font-weight: 200;
+      }
+
+      dd, footer .attribution {
         color: #4a3a28;
         font-size: 1rem;
         font-style: italic;
@@ -98,7 +116,7 @@
         margin-top: 6px;
       }
 
-      footer p {
+      footer .attribution {
         margin-top: 80px;
         text-align: right;
         max-width: none;
@@ -123,7 +141,7 @@
       li::before {
         content: '▸';
         content: '→';
-        color: #8b2500;
+        color: #c9a84c;
         position: absolute;
         left: 0;
         font-size: 1rem;
@@ -147,24 +165,28 @@
     </style>
   </head>
   <body>
-    <h1>Joshua Amadi</h1>
-    <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi">
+    <header>
+      <h1>Joshua Amadi</h1>
+      <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi">
+    </header>
 
     <h2>About Me</h2>
     <p>Joshua is a 400-level student of Library and Information Science with a strong passion for the financial markets. He began his forex trading journey in 2025, where he was introduced to the dynamics of the global financial space. Through discipline, resilience, and consistent learning, he has successfully navigated the challenges that come with trading.</p>
     <p>Today, Joshua is dedicated to empowering young individuals by helping them see the financial market from a more informed and strategic perspective. He is committed to inspiring enthusiasm, building confidence, and guiding others toward making smarter financial decisions.</p>
 
-    <h2>What I do</h2>
-    <p>I help young individuals understand and confidently navigate the financial markets, particularly forex trading. Through guidance, mentorship, and shared experience, I simplify complex trading concepts and promote a disciplined, informed approach to financial growth.</p>
-    <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311673/WhatsApp_Image_2026-04-04_at_14.59.26_q2egbe.jpg" alt="Mideforex Logo" style="max-width: 375px;">
+    <section style="
+        margin-top: 72px;
+        background-color: #162038;
+        border-radius: var(--border-radius, 12px);
+        padding: 12px 48px;">
+        <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-bottom: 0; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">What I do</h2>
+        <p style="color: #8a9ab8;
+        max-width: 54ch;">I help young individuals understand and confidently navigate the financial markets, particularly forex trading. Through guidance, mentorship, and shared experience, I simplify complex trading concepts and promote a disciplined, informed approach to financial growth.</p>
+        <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311673/WhatsApp_Image_2026-04-04_at_14.59.26_q2egbe.jpg" alt="Mideforex Logo" style="max-width: 375px;">
+    </section>
 
     <h2>Vision</h2>
     <p>To raise a community of confident and financially informed youths equipped to succeed in the global financial markets.</p>
-
-    <h2>Contact Information</h2>
-    <p>0706 847 1816</p>
-    <p>Telegram: @mide_forex</p>
-    <p>Email: amadijoshua11@gmail.com</p>
 
     <h2>Skills & Expertise</h2>
     <dl>
@@ -182,19 +204,35 @@
     </dl>
 
     <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311524/WhatsApp_Image_2026-04-04_at_14.59.26_1_yg2fz0.jpg" alt="NairaTrader Certificate">
+    <section style="width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 calc(50vw - 410px) 48px; background-color: #162038;">
+      <style>
+        ul.results > * {
+          color: #8a9ab8;
+        }
 
-    <h2>Results & Impact</h2>
-    <ul>
-      <li>Guided and mentored aspiring traders in understanding the fundamentals of forex trading</li>
-      <li>Helped young individuals develop a disciplined and informed approach to financial markets</li>
-      <li>Built growing interest and engagement among youths in forex trading and financial literacy</li>
-      <li>Simplified complex trading concepts into practical and easy-to-understand strategies</li>
-      <li>Mentored 1 aspiring trader in forex fundamentals</li>
-      <li>Reached 10+ youths through financial literacy conversations</li>
-    </ul>
+        ul.results h2, ul.results li {
+          border-bottom: 1px solid #3366bd;
+        }
+      </style>
+      <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-top: 30px; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">Results & Impact</h2>
+      <ul class="results">
+        <li>Guided and mentored aspiring traders in understanding the fundamentals of forex trading</li>
+        <li>Helped young individuals develop a disciplined and informed approach to financial markets</li>
+        <li>Built growing interest and engagement among youths in forex trading and financial literacy</li>
+        <li>Simplified complex trading concepts into practical and easy-to-understand strategies</li>
+        <li>Mentored 1 aspiring trader in forex fundamentals</li>
+        <li>Reached 10+ youths through financial literacy conversations</li>
+      </ul>
+    </section>
 
     <footer>
-      <p>Built by Ogechukwu Onuora @ OWeb. All rights reserved.</p>
+      <section>
+        <h2>Contact Information</h2>
+        <p>0706 847 1816</p>
+        <p>Telegram: @mide_forex</p>
+        <p>Email: amadijoshua11@gmail.com</p>
+      </section>
+      <p class="attribution">Built by Ogechukwu Onuora @ OWeb. All rights reserved.</p>
     </footer>
   </body>
 </html>
