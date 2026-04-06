@@ -35,19 +35,30 @@
         to   { opacity: 1; }
       }
 
+      @keyframes fadeLeft {
+        from { opacity: 0; transform: translateX(-24px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
+
       header {
         background-color: #162038;
-        padding: 80px 48px 72px;
+        padding: 22px 48px;
         box-shadow: 0 0 50px rgba(22, 32, 56, 0.7);
-        border-radius: 5px;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100vw;
+        left: 0;
+        letter-spacing: 1.5px;
         animation: fadeIn 0.8s ease both;
       }
 
       header h1 {
-        animation: fadeUp 0.9s ease 0.2s both;
+        font-size: 2.1rem;
+        animation: fadeLeft 0.9s ease 0.2s both;
       }
 
-      header img {
+      img.joshua-amadi {
         margin-bottom: 0px;
         animation: fadeUp 0.9s ease 0.4s both;
       }
@@ -171,7 +182,9 @@
       <h1>Joshua Amadi</h1>
     </header>
 
-    <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi" style="margin-left: auto; margin-right: auto; display: block; max-width: 550px;">
+    <main>
+
+    <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi" style="margin-left: auto; margin-right: auto; display: block; max-width: 550px;" class="joshua-amadi">
 
     <h2 class="reveal">About Me</h2>
     <p class="reveal">Joshua is a 400-level student of Library and Information Science with a strong passion for the financial markets. He began his forex trading journey in 2025, where he was introduced to the dynamics of the global financial space. Through discipline, resilience, and consistent learning, he has successfully navigated the challenges that come with trading.</p>
@@ -247,6 +260,8 @@
         <li>Reached 10+ youths through financial literacy conversations</li>
       </ul>
     </section>
+
+    </main>
 
     <footer>
       <section>
