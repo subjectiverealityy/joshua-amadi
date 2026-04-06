@@ -170,17 +170,32 @@
   <body>
     <header>
       <h1>Joshua Amadi</h1>
-      <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi">
     </header>
+
+    <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311570/WhatsApp_Image_2026-04-04_at_14.57.40_mffpqt.jpg" alt="Joshua Amadi" style="margin-left: auto; margin-right: auto; display: block; max-width: 550px;">
 
     <h2 class="reveal">About Me</h2>
     <p class="reveal">Joshua is a 400-level student of Library and Information Science with a strong passion for the financial markets. He began his forex trading journey in 2025, where he was introduced to the dynamics of the global financial space. Through discipline, resilience, and consistent learning, he has successfully navigated the challenges that come with trading.</p>
     <p class="reveal">Today, Joshua is dedicated to empowering young individuals by helping them see the financial market from a more informed and strategic perspective. He is committed to inspiring enthusiasm, building confidence, and guiding others toward making smarter financial decisions.</p>
 
-    <section class="reveal" style="margin-top: 72px; background-color: #162038; border-radius: 12px; padding: 12px 48px;">
-      <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-bottom: 0; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">What I do</h2>
+    <section class="reveal what-i-do-responsive">
+    <style>
+      .what-i-do-responsive {
+        margin-top: 72px;
+        background-color: #162038;
+        border-radius: 12px;
+        padding: 12px 48px;
+      }
+
+      @media (max-width: 550px) {
+        .what-i-do-responsive {
+          padding: 12px 24px;
+        }
+      }
+    </style>
+      <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-bottom: 0; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400; margin-top: 36px;">What I do</h2>
       <p style="color: #8a9ab8; max-width: 54ch;">I help young individuals understand and confidently navigate the financial markets, particularly forex trading. Through guidance, mentorship, and shared experience, I simplify complex trading concepts and promote a disciplined, informed approach to financial growth.</p>
-      <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311673/WhatsApp_Image_2026-04-04_at_14.59.26_q2egbe.jpg" alt="Mideforex Logo" style="max-width: 375px; margin-left: 50px; margin-right: auto;">
+      <img src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311673/WhatsApp_Image_2026-04-04_at_14.59.26_q2egbe.jpg" alt="Mideforex Logo" style="max-width: 375px;">
     </section>
 
     <h2 class="reveal">Vision</h2>
@@ -200,7 +215,29 @@
 
     <img class="reveal" src="https://res.cloudinary.com/dp1eobk1g/image/upload/q_auto/f_auto/v1775311524/WhatsApp_Image_2026-04-04_at_14.59.26_1_yg2fz0.jpg" alt="NairaTrader Certificate">
 
-    <section class="reveal" style="width: 100vw; margin-left: calc(-50vw + 50%); padding: 0 calc(50vw - 410px) 48px; background-color: #162038;">
+    <section class="reveal results-responsive">
+      <style>
+        .results-responsive {
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
+          padding: 0 calc(50vw - 410px) 48px;
+          background-color: #162038;
+        }
+
+        ul.results > * {
+          color: #8a9ab8;
+        }
+
+        ul.results h2, ul.results li {
+          border-bottom: 1px solid #3366bd;
+        }
+
+        @media (max-width: 900px) {
+          .results-responsive {
+            padding: 0px 45px;
+          } 
+        }
+      </style>
       <h2 style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2rem); font-style: italic; color: #c9a84c; line-height: 1.4; max-width: 22ch; margin-bottom: 24px; padding-top: 30px; border-bottom: 1px solid #243450; letter-spacing: 0; text-transform: none; font-weight: 400;">Results &amp; Impact</h2>
       <ul class="results">
         <li>Guided and mentored aspiring traders in understanding the fundamentals of forex trading</li>
